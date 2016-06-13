@@ -1,0 +1,16 @@
+{
+  "name": "angular-ngroute",
+  "version": "1.0.0",
+  "description": "trabajando con ngroute",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  }
+}
