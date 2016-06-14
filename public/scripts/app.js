@@ -4,7 +4,7 @@ angular.module("app", ["ngRoute"])
             .when("/", {
                 controller: "appCtrl",
                 controllerAs: "vm",
-                templateUrl: "../views/home.html"
+                templateUrl: "../views/index.html"
             })
             .when("/descargas", {
                 controller: "appCtrl",
