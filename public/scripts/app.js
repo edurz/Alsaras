@@ -4,17 +4,17 @@ angular.module("app", ["ngRoute"])
             .when("/", {
                 controller: "appCtrl",
                 controllerAs: "vm",
-                templateUrl: "/home.html"
+                templateUrl: "../views/home.html"
             })
             .when("/descargas", {
                 controller: "appCtrl",
                 controllerAs: "vm",
-                templateUrl: "/descargas.html"
+                templateUrl: "../views/descargas.html"
             })
             .when("/opciones", {
                 controller: "appCtrl",
                 controllerAs: "vm",
-                templateUrl: "/opciones.html"
+                templateUrl: "../views/opciones.html"
             });
     })
     .controller("appCtrl", function(){
