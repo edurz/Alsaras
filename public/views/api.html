@@ -8,7 +8,7 @@
 
 <body ng-controller="mainController">
 <div class="container" style="margin-top:30px">
-  Llamada a la API de Github
+  Llamada a la API de Github / Ingresar Username de Github
   <form name="searchUser" ng-submit="search(username)" class="form-inline">
     <input type="search" ng-model="username" placeholder="Ingresar usuario" class="form-control">
     <input type="submit" value="Buscar" class="btn btn-primary">
@@ -27,18 +27,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="repo in repos">
+      <tr ng-repeat="github in repos">
         <td>
-          {{repo.name}}
+          {{github.name}}
         </td>
         <td>
-          {{repo.html_url}}
+          {{github.html_url}}
         </td>
         <td>
-          {{repo.id}}
+          {{github.id}}
         </td>
         <td>
-          {{repo.ssh_url}}
+          {{github.ssh_url}}
         </td>
       </tr>
     </tbody>

@@ -6,6 +6,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/api', function(req, res){
+  console.log('render api.html individualmente');
   res.render('api');
 })
 app.use(express.static(path.join(__dirname, '/public')));
