@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="github">
+
+<head>
+  <title>API GITHUB</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="mainController">
+<div class="container" style="margin-top:30px">
+  Llamada a la API de Github / Ingresar Username de Github
+  <form name="searchUser" ng-submit="search(username)" class="form-inline">
+    <input type="search" ng-model="username" placeholder="Ingresar usuario" class="form-control">
+    <input type="submit" value="Buscar" class="btn btn-primary">
+  </form>
+  <div>
+    <h1> {{error}} </h1>
+    <h1>{{user.name}}</h1>
+    <h3>{{user.html_url}} </h3>
+  </div>
+  <table class="table table-stripped table-hover">
+    <thead>
+      <tr>
+        <td>nombre</td>
+        <td>URL</td>
+        <td>Id</td>
+        <td>SSH URL</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="github in repos">
+        <td>
+          {{github.name}}
+        </td>
+        <td>
+          {{github.html_url}}
+        </td>
+        <td>
+          {{github.id}}
+        </td>
+        <td>
+          {{github.ssh_url}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+<script src="../scripts/api.js"></script>
+
+</html>
