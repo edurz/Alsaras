@@ -5,6 +5,10 @@ app.get('/', function(req, res) {
     res.render("ngRoute");
 });
 
+app.get('/api', function(req, res){
+  console.log('render api.html individualmente');
+  res.render('api');
+})
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
